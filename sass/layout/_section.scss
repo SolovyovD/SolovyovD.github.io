@@ -1,0 +1,145 @@
+.section {
+  @include flex__column;
+  padding: 9rem 2rem;
+  z-index: 2;
+  width: 120rem;
+  max-width: 95vw;
+  margin: 0 auto;
+
+  &__image {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  &__role {
+    opacity: 0;
+  }
+}
+
+.items {
+  &__two {
+    @include flex__row;
+    margin: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.container__text {
+  @include flex__column;
+  width: 70rem;
+  max-width: 90vw;
+
+  &__narrow {
+    width: 45%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  & .paragraph {
+    width: 90%;
+  }
+}
+
+.flag {
+  margin: 2rem;
+  @include respond(tab-port) {
+    width: 30rem;
+    max-width: 90vw;
+  }
+}
+
+#pedagogy,
+#reseller {
+  margin-top: 15rem;
+}
+
+#partners,
+#home-learning {
+  margin: 9rem auto;
+  width: 100vw;
+  max-width: 100vw;
+
+  & .header__titles {
+    margin-bottom: 4rem;
+  }
+}
+
+.person__img {
+  max-width: 20rem;
+}
+.highlight {
+  border-left: 1rem solid rgb(138, 208, 198);
+  padding-left: 3rem;
+
+  .person__img {
+    max-width: 18rem;
+  }
+
+  &__box {
+    width: 60rem;
+    max-width: 100%;
+    border: 3px dotted $color-green;
+    padding: 3rem;
+    margin-top: 3rem;
+
+    & .list {
+      width: 90%;
+    }
+  }
+}
+
+img.round {
+  border-radius: 100%;
+}
+
+.img__with__text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 3rem auto;
+
+  width: 90rem;
+  max-width: 70vw;
+  //  margin: 1rem 2rem;
+
+  > div {
+    text-align: left;
+    font-style: italic;
+    margin-left: 4rem;
+    font-size: 1.75rem;
+    flex: 1;
+    flex-basis: 10rem;
+    padding-right: 2rem;
+  }
+
+  h4 {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 2rem 0rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-style: normal;
+    color: #222;
+  }
+}
+
+.section ul {
+  font-size: 2rem;
+  width: 90rem;
+  max-width: 70vw;
+  margin: 1rem 2rem;
+  padding-left: 5rem;
+}
+
+ul.no-margin-top {
+  margin-top: 0rem;
+}
+
+section.center {
+  text-align: center;
+}

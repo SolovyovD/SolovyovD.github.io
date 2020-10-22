@@ -1,0 +1,63 @@
+.blog {
+  & .paragraph {
+    width: 80rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 2rem;
+  }
+
+  &__item {
+    padding-bottom: 3rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid $color-grey;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-green-dark;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: left;
+  }
+
+  &__date {
+    margin-top: 1rem;
+  }
+
+  &__author {
+    @include flex__row;
+    width: 80rem;
+    max-width: 80vw;
+    margin: 3rem 1rem;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    &__img {
+      float: left;
+      width: 15rem;
+      border-radius: 100rem;
+      margin-right: 2rem;
+      @include respond(phone) {
+        margin: 0 0 2rem 0;
+      }
+    }
+
+    &__text {
+      font-style: italic;
+    }
+  }
+}

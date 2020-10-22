@@ -1,0 +1,107 @@
+.button {
+  text-transform: initial;
+  background-color: $color-green;
+  color: $color-white;
+  font-size: $default-font-size-L;
+  border-radius: 2rem;
+  padding: 2rem 3rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  text-align: center;
+
+  &:hover {
+    border: 2px solid $color-green;
+    background-color: $color-white;
+    color: $color-green;
+    transform: scale(1.03);
+  }
+
+  &__language {
+    margin: 1rem;
+    padding: 1rem 3rem;
+    min-width: 20rem;
+  }
+
+  &__navigation {
+    font-size: $default-font-size;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 100rem;
+  }
+
+  &__training {
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-size: $default-font-size;
+    display: inline-block;
+  }
+
+  &__pink {
+    background-color: $color-pink;
+    &:hover {
+      border: 2px solid $color-pink;
+      color: $color-pink;
+    }
+  }
+
+  &__yellow {
+    background-color: $color-yellow;
+    &:hover {
+      border: 2px solid $color-yellow;
+      color: $color-yellow;
+    }
+  }
+
+  &__white {
+    background-color: $color-white;
+    color: $color-black;
+    &:hover {
+      border: 2px solid $color-yellow;
+      color: $color-yellow;
+    }
+  }
+
+  &__get-started {
+    margin: 1rem;
+    min-width: 33rem;
+    padding: 2rem 0rem;
+  }
+
+  &__role {
+    border: 2px solid $color-white;
+    background-color: transparent;
+    color: $color-white;
+    margin: 1.5rem;
+    min-width: 20rem;
+    padding: 2rem 0rem;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+
+    @include respond(phone) {
+      min-width: 23rem;
+    }
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-green;
+      border: 2px solid transparent;
+      transform: scale(1.05);
+    }
+
+    &__selected {
+      background-color: $color-yellow;
+      color: $color-white;
+      border: 2px solid $color-yellow;
+      transform: scale(1.15);
+
+      &:hover {
+        background-color: $color-yellow;
+        color: $color-white;
+        border: 2px solid $color-yellow;
+        transform: scale(1.15);
+      }
+    }
+  }
+}

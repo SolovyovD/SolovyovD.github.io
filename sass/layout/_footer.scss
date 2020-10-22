@@ -1,0 +1,25 @@
+.footer {
+  @include flex__row;
+  padding: 4rem 2rem;
+  background-color: $color-light;
+  flex-wrap: wrap;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  & > * {
+    margin: 1rem;
+  }
+
+  &__img {
+    width: 12rem;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $color-dark;
+  }
+}

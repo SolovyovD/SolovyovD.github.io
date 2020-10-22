@@ -1,0 +1,35 @@
+.flex__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex__column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem !important;
+}
+
+.margin-bottom-3 {
+  margin-bottom: 3rem;
+}
+
+.float {
+  &__right {
+    float: right;
+  }
+}
+
+.padding-top-3 {
+  padding-top: 3rem !important;
+}

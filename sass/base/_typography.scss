@@ -1,0 +1,259 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: $color-dark;
+  background-color: #fafafa;
+}
+
+p {
+  font-size: $default-font-size;
+}
+
+@mixin heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin: 0 2rem;
+}
+
+.heading {
+  &__h1 {
+    @include heading;
+    font-size: 8rem;
+    font-weight: 300;
+
+    @include respond(tab-land) {
+      font-size: 6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 5rem;
+    }
+  }
+
+  &__h2 {
+    @include heading;
+    font-size: 4rem;
+    color: $color-green;
+
+    @include respond(tab-port) {
+      font-size: 3.2rem;
+    }
+  }
+  &__h3 {
+    @include heading;
+    font-size: 2.4rem;
+    font-weight: 300;
+    @include respond(tab-port) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__h4 {
+    text-align: left;
+    font-size: $default-font-size-L;
+    margin: 3rem 2rem 1rem 2rem;
+  }
+
+  &__icon {
+    width: 5rem;
+  }
+
+  &__strong {
+    font-weight: 700;
+  }
+
+  &__blog {
+    font-size: 6rem;
+
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+  }
+
+  &__light {
+    font-weight: 300;
+    margin-top: 3rem;
+  }
+}
+
+.text {
+  &__white {
+    color: $color-white !important;
+  }
+
+  &__green {
+    color: $color-green !important;
+  }
+
+  &__red {
+    color: $color-red !important;
+  }
+
+  &__blue {
+    color: $color-blue !important;
+  }
+
+  &__pink {
+    color: $color-pink !important;
+  }
+
+  &__yellow {
+    color: $color-yellow !important;
+  }
+
+  &__dark {
+    color: $color-dark !important;
+  }
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  width: 90rem;
+  max-width: 70vw;
+  margin: 1rem 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @include respond(tab-port) {
+    max-width: 80vw;
+  }
+
+  @include respond(phone) {
+    max-width: 85vw;
+    margin: 1rem;
+  }
+
+  &__img {
+    float: left;
+    height: 28rem;
+    width: auto;
+    margin: 0.7rem 2rem 0 0;
+    max-width: 80vw;
+    &.click {
+      cursor: pointer;
+    }
+
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+      margin: 2rem auto;
+      display: block;
+      float: initial;
+      width: 50rem;
+      height: auto;
+    }
+
+    &__right {
+      float: right;
+      margin: 0.7rem 0 0 2rem;
+
+      @include respond(phone) {
+        margin: 2rem auto;
+        float: initial;
+      }
+    }
+
+    &__author {
+      width: 15rem;
+      height: initial;
+      border-radius: 100rem;
+    }
+  }
+
+  &__link {
+    border-bottom: 1px dashed $color-green-dark;
+    text-decoration: none;
+    color: $color-green-dark;
+    transition: all 0.3s;
+    // font-weight: bold;
+
+    &:hover {
+      border-bottom: 1px dashed $color-dark;
+      color: $color-dark;
+    }
+  }
+
+  &__centered {
+    text-align: center;
+  }
+  &__strong {
+    font-weight: 700;
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+}
+
+.contact-name {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.link {
+  font-size: $default-font-size;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+  font-weight: 400;
+
+  &__contact {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline;
+    color: $color-green;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__red {
+    color: $color-red;
+    &:hover {
+      border-bottom: 2px solid $color-red;
+    }
+  }
+
+  &__blue {
+    color: $color-blue;
+    &:hover {
+      border-bottom: 2px solid $color-blue;
+    }
+  }
+
+  &__pink {
+    color: $color-pink;
+    &:hover {
+      border-bottom: 2px solid $color-pink;
+    }
+  }
+}
+
+.list {
+  font-size: $default-font-size;
+  width: 80rem;
+  max-width: 70vw;
+  @include respond(tab-land) {
+    max-width: 60vw;
+  }
+
+  @include respond(phone) {
+    max-width: 80vw;
+    margin: 1rem;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+}

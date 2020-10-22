@@ -1,0 +1,81 @@
+<div class="navigation__buttons navigation__buttons__left">
+  <a href="index.html">
+    <img src="/img/eduten_logo.svg" class="navigation__logo" alt="Eduten logo">
+  </a>
+  <button aria-label="Select language" class="button button__navigation" onclick="openModal(this.id)"
+    id="navigation_language">En &rarr;</button>
+</div>
+
+<div id="navigation__links" class="navigation__links">
+  <div class="navigation__wrapper">
+    <a href="index.html" onclick="toggleNavigation()" class="navigation__link">Eduten Playground</a>
+
+    <ul class="navigation__list">
+      <li class="navigation__list__item">
+        <a href="index.html#pedagogy" onclick="toggleNavigation()" class="navigation__sublink">Pedagogy</a>
+      </li>
+      <li class="navigation__list__item">
+        <a href="index.html#impact" onclick="toggleNavigation()" class="navigation__sublink">Impact On Learning</a>
+      </li>
+      <li class="navigation__list__item">
+        <a href="index.html#analytics" onclick="toggleNavigation()" class="navigation__sublink">Learning
+          Analytics</a>
+      </li>
+      <li class="navigation__list__item">
+        <a href="index.html#benefits" onclick="toggleNavigation()" class="navigation__sublink">Teacher Benefits</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navigation__wrapper"><a href="get-started.html" onclick="toggleNavigation()" class="navigation__link">Get
+      Started</a>
+  </div>
+  <div class="navigation__wrapper">
+    <a href="training.html" onclick="toggleNavigation()" class="navigation__link">Training</a>
+
+    <ul class="navigation__list">
+      <li class="navigation__list__item">
+        <a href="training.html#training" onclick="toggleNavigation()" class="navigation__sublink">Training</a>
+      </li>
+      <li class="navigation__list__item">
+        <a href="training.html#othertrainings" onclick="toggleNavigation()" class="navigation__sublink">Other trainings
+        </a>
+      <li class="navigation__list__item">
+        <a href="training.html#support" onclick="toggleNavigation()" class="navigation__sublink">Support</a>
+      </li>
+      </li>
+    </ul>
+  </div>
+  <div class="navigation__wrapper"><a href="partners.html" onclick="toggleNavigation()"
+      class="navigation__link">Partners</a>
+  </div>
+  <div class="navigation__wrapper"><a href="about.html" onclick="toggleNavigation()" class="navigation__link">About
+      Eduten</a>
+    <ul class="navigation__list">
+      <li class="navigation__list__item">
+        <a href="/blog" onclick="toggleNavigation()" class="navigation__sublink">Blog</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="navigation__buttons navigation__buttons__right">
+  <a href="https://playground.eduten.com/" class="button button__navigation">Log in &rarr;</a>
+  <button aria-label="Navigation menu" onclick="toggleNavigation()" class="navigation__button">
+    <span class="navigation__icon">&nbsp;</span>
+  </button>
+</div>
+
+
+<div id="navigation_language_modal" class="modal fadeIn">
+  <span class="modal__close quickZoom"><span class="navigation__icon close">&nbsp;</span></span>
+  <div class="modal__language quickZoom">
+    <h3 class="heading__h3 heading__strong">Select language</h3>
+    <h3 class="heading__h3">Selecione o idioma</h3>
+    <div class="modal__language__wrapper">
+      <a href="/" class="button button__language">English</a>
+      <!-- <a href="/es/" class="button button__language">Spanish</a> -->
+      <a href="/pt/" class="button button__language">Português</a>
+      <!-- <a href="/ee/" class="button button__language">Estonia</a> -->
+    </div>
+  </div>
+</div>
+<div class="navigation__gradient"></div>

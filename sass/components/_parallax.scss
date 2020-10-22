@@ -1,0 +1,176 @@
+.parallax {
+  &__parent {
+    overflow: hidden;
+    height: 50vh;
+    position: relative;
+
+    @include respond(tab-port) {
+      height: 40vh;
+    }
+  }
+
+  &__text {
+    @include absCenter;
+    @include heading;
+    font-size: 4rem;
+    color: $color-white;
+    width: 60%;
+    max-width: 90vw;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 80%;
+    }
+  }
+
+  &__heading {
+    height: 25rem;
+
+    &__large {
+      height: 30rem;
+    }
+  }
+
+  &__child {
+    height: 200%;
+    position: relative;
+    top: -100%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    &__1 {
+      background-image: url('../img/bg/parallax1_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax1_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax1_tablet.jpg');
+      }
+    }
+
+    &__2 {
+      background-image: url('../img/bg/parallax2_fullhd.jpg');
+      background-position: 30% 50%;
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax2_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax2_tablet.jpg');
+      }
+    }
+
+    &__3 {
+      background-image: url('../img/bg/parallax3_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax3_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax3_tablet.jpg');
+      }
+    }
+
+    &__4 {
+      background-image: url('../img/bg/parallax4_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax4_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax4_tablet.jpg');
+      }
+    }
+
+    &__5 {
+      background-image: url('../img/bg/parallax5_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax5_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax5_tablet.jpg');
+      }
+    }
+
+    &__7 {
+      background-image: url('../img/bg/parallax7_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax7_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax7_tablet.jpg');
+      }
+    }
+
+    &__8 {
+      background-image: url('../img/bg/parallax8_fullhd.jpg');
+
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax8_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax8_tablet.jpg');
+      }
+    }
+
+    &__9 {
+      background-image: url('../img/bg/parallax9_fullhd.jpg');
+      filter: brightness(0.8);
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax9_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax9_tablet.jpg');
+      }
+    }
+
+    &__10 {
+      filter: brightness(0.8);
+      background-image: url('../img/bg/parallax10_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax10_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax10_tablet.jpg');
+      }
+    }
+
+    &__11 {
+      background-image: url('../img/bg/parallax11_fullhd.jpg');
+      filter: brightness(0.8);
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax11_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax11_tablet.jpg');
+      }
+    }
+
+    &__12 {
+      background-image: url('../img/bg/parallax12_fullhd.jpg');
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax12_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax12_tablet.jpg');
+      }
+    }
+
+    &__13 {
+      background-image: url('../img/bg/parallax13_fullhd.jpg');
+      filter: brightness(0.8);
+      @include respond(tab-land) {
+        background-image: url('../img/bg/parallax13_hdready.jpg');
+      }
+      @include respond(tab-port) {
+        background-image: url('../img/bg/parallax13_tablet.jpg');
+      }
+    }
+  }
+}
+
+.parallax-mirror {
+  z-index: 1 !important;
+}

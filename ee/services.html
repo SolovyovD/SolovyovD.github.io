@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="et" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Services &mdash; Eduten</title>
+  <meta name="description"
+    content="Our services make sure that teachers, students and parents have an enjoyable experience with Eduten Playground.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!-- <link rel="stylesheet" href="/css/skeleton.css"> -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114725189-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-114725189-1');
+    gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+  </script>
+</head>
+
+<body>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <nav id="navigation" class="navigation"></nav>
+  <header class="header header__blue">
+    <div class="header__titles">
+      <h1 class="heading__h1 text__white">Estonian Services</h1>
+      <p class="header__slogan header__slogan__large">Our services make sure that teachers, students and parents have an
+        enjoyable experience with Eduten Playground.</p>
+
+    </div>
+  </header>
+
+  <section class="section" id="support">
+    <div class="items__two">
+      <img src="/img/support_blue.png" alt="Lifebuoy" class="heading__icon">
+      <h2 class="heading__h2 text__blue">Support</h2>
+    </div>
+
+    <p class="paragraph">We employ a global network of certified support professionals that can help you with any
+      question that you might have. At the starter workshop teachers are given a information package that includes
+      contact details to their support team. Your support team can be from Eduten or one of our certified partners.</p>
+  </section>
+
+  <section class="parallax__parent" id="parallax1">
+    <div class="parallax__child parallax__child__4">
+    </div>
+  </section>
+
+  <section class="section" id="training">
+    <div class="items__two">
+      <img src="/img/grad_blue.png" alt="Square academic cap" class="heading__icon">
+      <h2 class="heading__h2 text__blue">Training</h2>
+    </div>
+    <p class="paragraph">Eduten Playground has been designed to be very easy to use, so the training requirements are
+      minimal. Before getting started you’ll join a short workshop that briefs you on the usage of Eduten Playground and
+      leveraging its pedagogical benefits with your students. Our certified trainer team can arrange a workshop for you
+      locally, or you can join one online, and afterwards you’ll get a certificate for completing the workshop. Contact
+      <a href="mailto:support@eduten.com" class="paragraph__link">support@eduten.com</a> to learn more about starter
+      workshops.</p>
+    <p class="paragraph">
+      In collaboration with University of Turku we also provide courses to help teachers and school management to
+      benefit from Finnish educational expertise. Topics include eg. Finnish pedagogy, applying digital tools in
+      education and learning analytics. Please contact <a href="mailto:info@eduten.com"
+        class="paragraph__link">info@eduten.com</a> to learn more about our training courses.
+    </p>
+  </section>
+  <section class="parallax__parent" id="parallax2">
+    <div class="parallax__child parallax__child__5">
+    </div>
+  </section>
+  <section class="section" id="curriculum">
+    <div class="items__two">
+      <img src="/img/curriculum_blue.png" alt="Calendar" class="heading__icon">
+      <h2 class="heading__h2 text__blue">Curriculum Design</h2>
+    </div>
+    <p class="paragraph">Together with University of Turku we provide services for education leaders to help them apply
+      Finnish education expertise in their countries. Contact <a href="mailto:info@eduten.com"
+        class="paragraph__link">info@eduten.com</a> to learn more.</p>
+
+  </section>
+
+
+  <footer class="footer"></footer>
+
+
+  <script src="/js/vendor/plugins/TweenMax.min.js"></script>
+  <script src="/js/vendor/ScrollMagic.min.js"></script>
+  <script src="/js/vendor/plugins/animation.gsap.min.js"></script>
+
+
+  <script src="/js/vendor/jquery-3.5.1.min.js"></script>
+
+
+  <script src="/js/script.js" async defer></script>
+
+  <script>
+
+    // init controller
+    let controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "250%" } });
+
+    // build scenes
+    new ScrollMagic.Scene({ triggerElement: "#parallax1" })
+      .setTween("#parallax1 > div", { y: "100%", ease: Linear.easeNone })
+      // .addIndicators()
+      .addTo(controller);
+
+    new ScrollMagic.Scene({ triggerElement: "#parallax2" })
+      .setTween("#parallax2 > div", { y: "40%", ease: Linear.easeNone })
+      // .addIndicators()
+      .addTo(controller);
+
+  </script>
+</body>
+
+</html>

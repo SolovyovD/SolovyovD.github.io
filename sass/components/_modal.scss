@@ -1,0 +1,116 @@
+.modal {
+  position: relative;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color-black, 0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+
+  &__image,
+  &__language {
+    cursor: initial;
+    background-color: $color-light;
+    border-radius: 3px;
+    max-width: 90vw;
+    max-height: 80vh;
+
+    &::selection {
+      background-color: transparent !important;
+      color: transparent;
+    }
+  }
+
+  &__language {
+    @include flex__column;
+    padding: 2rem;
+    max-width: 80vw;
+
+    &__wrapper {
+      @include flex__row;
+      width: 50rem;
+      flex-wrap: wrap;
+
+      @include respond(phone) {
+        width: initial;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-white;
+    margin: 2rem;
+    max-width: 80vw;
+    font-size: $default-font-size-L;
+  }
+
+  &__close {
+    background-color: $color-light;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 2.5rem;
+    right: 4rem;
+    border-radius: 2rem;
+    z-index: 2000;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 5rem;
+
+    &:hover {
+      & .navigation__icon.close::before {
+        top: 0;
+        transform: rotate(315deg) scale(1);
+        @include respond(tab-port) {
+          top: 0;
+        }
+      }
+
+      & .navigation__icon.close::after {
+        top: 0;
+        transform: rotate(45deg) scale(1);
+        @include respond(tab-port) {
+          top: 0;
+        }
+      }
+    }
+
+    @include respond(tab-port) {
+      border-radius: 1.2rem;
+      top: 2rem;
+      right: 3rem;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.navigation__icon.close {
+  background-color: transparent;
+  &::before {
+    top: 0;
+    transform: rotate(135deg) scale(0.8);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(-135deg) scale(0.8);
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: $color-dark;
+  text-decoration: none;
+  cursor: pointer;
+}

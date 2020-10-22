@@ -1,0 +1,137 @@
+.process-graph {
+  @include flex__row;
+  margin: 3rem 0;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  &__circle {
+    @include flex__row;
+    position: relative;
+    border-radius: 100rem;
+    width: 20rem;
+    height: 20rem;
+    background-image: url('../img/circle_blue.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &__stroke {
+      background-image: url('../img/circle_blue_stroke.svg');
+    }
+
+    @include respond(tab-port) {
+      width: 18rem;
+      height: 18rem;
+    }
+
+    @include respond(phone) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    &__large {
+      width: 25rem;
+      height: 25rem;
+
+      @include respond(tab-port) {
+        width: 20rem;
+        height: 20rem;
+      }
+
+      @include respond(phone) {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+
+    &__small {
+      @include flex__row;
+      width: 7rem;
+      height: 7rem;
+      font-size: 2rem;
+      position: absolute;
+      top: 3%;
+      left: 3%;
+      background-image: url('../img/circle_blue_stroke-2.svg');
+      font-weight: 500;
+
+      @include respond(tab-port) {
+        width: 5rem;
+        height: 5rem;
+        top: 3%;
+        left: 3%;
+      }
+
+      @include respond(phone) {
+        width: 7rem;
+        height: 7rem;
+        top: 3%;
+        left: 3%;
+      }
+    }
+  }
+
+  &__box {
+    @include flex__row;
+    background-color: $color-blue;
+    width: 30rem;
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    min-height: 10rem;
+
+    @include respond(tab-port) {
+      padding: 2rem 1rem;
+    }
+
+    @include respond(phone) {
+      padding: 3rem 2rem;
+    }
+
+    & .process-graph__text {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: $color-white;
+    font-weight: 700;
+    font-size: $default-font-size;
+    max-width: 70%;
+    @include respond(tab-port) {
+      font-size: 1.6rem;
+    }
+    @include respond(phone) {
+      font-size: $default-font-size;
+    }
+
+    &__large {
+      font-size: 2.2rem;
+      max-width: 60%;
+    }
+
+    @include respond(tab-port) {
+      font-size: $default-font-size;
+    }
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__arrow {
+    margin: 0 2rem;
+    width: 3rem;
+
+    @include respond(tab-port) {
+      margin: 0 1.5rem;
+    }
+
+    @include respond(phone) {
+      width: initial;
+      height: 5rem;
+      margin: 1.5rem;
+      transform: rotate(90deg);
+    }
+  }
+}

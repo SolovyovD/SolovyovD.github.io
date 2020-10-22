@@ -1,0 +1,159 @@
+.header {
+  @include flex__column;
+  padding-top: 7rem;
+  transition: all 1s;
+
+  &__frontpage {
+    min-height: 100vh;
+  }
+
+  &__blue {
+    background-color: $color-blue;
+  }
+
+  &__green {
+    background-color: $color-green;
+  }
+
+  &__yellow {
+    background-color: $color-yellow;
+  }
+
+  &__pink {
+    background-color: $color-pink;
+  }
+
+  &__green-light {
+    background-color: $color-green-light;
+  }
+
+  &__titles {
+    z-index: 2;
+    @extend .flex__column;
+    color: $color-white;
+    margin: 13rem 2rem 3rem 2rem;
+    max-width: 90vw;
+    &__partner {
+      @extend .flex__column;
+      max-width: 80vw;
+      margin: 8rem 2rem 8rem 2rem;
+    }
+  }
+
+  &__slogan {
+    font-size: $default-font-size-L;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    max-width: 90rem;
+    @include respond(tab-port) {
+      max-width: 90vw;
+    }
+
+    &__large {
+      font-size: 3rem;
+
+      @include respond(phone) {
+        font-size: $default-font-size-L;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    border-bottom: 2px solid;
+    transition: all 0.3s;
+
+    &:hover {
+      font-weight: bolder;
+    }
+  }
+
+  &__items {
+    @include flex__row;
+    z-index: 2;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 34rem;
+      max-width: 80vw;
+      border-radius: 2rem;
+      margin: 1rem;
+      background-color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    &__partner-item {
+      width: 54rem;
+      max-width: 80vw;
+      border-radius: 2rem;
+      margin: 1rem;
+      padding: 0rem 1.5rem;
+      @include respond(tab-port) {
+        width: 80vw;
+        margin: 0;
+      }
+    }
+    &__partner-contact-item {
+      width: 26rem;
+      max-width: 80vw;
+      border-radius: 2rem;
+      margin: 1rem;
+      padding: 0rem 1.5rem;
+    }
+    &__partner-about-img {
+      width: 44rem;
+      height: 65rem;
+      margin: 1rem;
+      max-width: 80vw;
+      background-image: url('../img/partner_about_img.jpg');
+      background-size: 270%;
+      background-position: 40% 100%;
+      border-radius: 1rem;
+      filter: drop-shadow(0px 6px 48px rgba(24, 161, 154, 0.16));
+      @include respond(tab-port) {
+        background-size: 100%;
+        width: 80vw;
+        height: 40vw;
+        margin: 0 0 4rem 0;
+      }
+    }
+
+    &__partner-makke {
+      background-image: url('../img/makke_leppanen_eduten.jpeg');
+      background-size: cover;
+      border-radius: 64rem;
+      height: 19rem;
+      width: 19rem;
+    }
+
+    &__text {
+      margin: 1rem 0;
+    }
+
+    &__img {
+      height: 7rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__video {
+    &__container {
+      margin: 5rem 3rem;
+    }
+  }
+
+  &__get-started {
+    @include flex__column;
+    z-index: 2;
+    color: $color-white;
+    margin: 6rem 0rem;
+
+    &__buttons {
+      @include flex__row;
+      flex-wrap: wrap;
+      margin: 0 2rem;
+    }
+  }
+}

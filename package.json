@@ -1,0 +1,35 @@
+{
+  "name": "eduten.com",
+  "version": "0.0.1",
+  "description": "Page for Eduten.com",
+  "main": "index.js",
+  "scripts": {
+    "watch:js": "watch \"npm run combine-js\" js-dev",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:js watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b  \"last 10 version\" css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass concat:css prefix:css compress:css compress-js",
+    "combine-js": "uglifyjs js-dev/*.js --output js/script.js",
+    "compress-js": "uglifyjs js-dev/*.js --compress sequences=true,conditionals=true,booleans=true --mangle --output js/script.js"
+  },
+  "author": "Eero",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.2",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "npm": "^6.9.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^7.1.1",
+    "uglify-es": "^3.3.9",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "sass": "^1.26.9"
+  }
+}

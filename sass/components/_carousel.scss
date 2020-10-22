@@ -1,0 +1,143 @@
+.carousel {
+  width: 55%;
+
+  position: relative;
+  @include respond(tab-port) {
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &__main {
+    position: relative;
+    min-height: 20rem;
+
+    &__item {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+
+      &.fadeIn {
+        animation-duration: 0.5s;
+      }
+
+      &__img {
+        width: 100%;
+        height: auto;
+      }
+
+      &__text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $color-white;
+        padding: 1rem 1rem 1.5rem 1rem;
+        width: 100%;
+        background-color: rgba($color-black, 0.7);
+        font-size: $default-font-size;
+
+        @include respond(tab-port) {
+          padding: 0.5rem 0.5rem 1rem 0.5rem;
+        }
+
+        @include respond(phone) {
+          @include flex__column;
+          padding: 0.5rem 1rem;
+          position: relative;
+          transform: translateY(-0.7rem);
+          background-color: $color-green;
+          text-align: center;
+          height: 8rem;
+        }
+      }
+    }
+  }
+
+  &__button {
+    @include flex__row;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    font-size: 4rem;
+    transform: translate(0, -50%);
+    transition: all 0.3s;
+    height: 8rem;
+    width: 4rem;
+
+    &__icon {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__left {
+      left: 2rem;
+      &:hover {
+        transform: translate(-1rem, -50%);
+      }
+    }
+
+    &__right {
+      right: 2rem;
+      &:hover {
+        transform: translate(1rem, -50%);
+      }
+    }
+  }
+
+  &__thumbs {
+    position: relative;
+    overflow: hidden;
+    // display: block;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    &__wrapper {
+      @include flex__row;
+
+      transition: all 0 ease-out;
+
+      &.movedLeft {
+        transform: translateX(33.33%);
+        transition: all 0.3s ease-out;
+      }
+      &.movedRight {
+        transform: translateX(-33.33%);
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    &__button {
+      position: absolute;
+      width: 33.33%;
+      top: 0;
+      height: 100%;
+      background-color: rgba($color-white, 0.5);
+      border: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgba($color-white, 0);
+      }
+
+      &__left {
+        left: 0;
+      }
+
+      &__right {
+        right: 0;
+      }
+    }
+
+    &__img {
+      width: 33.33%;
+      display: inline-block;
+    }
+  }
+}
